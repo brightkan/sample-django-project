@@ -20,7 +20,7 @@ RUN python manage.py migrate --no-input
 
 
 # Expose port
-EXPOSE $PORT
+EXPOSE 3000
 
 # Define the command to run your application
-CMD gunicorn project:application --bind 0.0.0.0:$PORT
+CMD gunicorn project:application --bind 0.0.0.0:3000
