@@ -22,4 +22,7 @@ RUN python manage.py migrate --no-input
 # Expose port
 EXPOSE 3000
 
+CMD gunicorn project.wsgi
+
+
 
