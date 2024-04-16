@@ -18,10 +18,7 @@ COPY . /app/
 # Run migrations and collect static files
 RUN python manage.py migrate --no-input
 
-
-# Expose port
-EXPOSE 3000
-
+#Gunicorn
 CMD gunicorn project.wsgi
 
 
